@@ -1,0 +1,31 @@
+language: python
+
+sudo: true
+
+os: linux
+
+python:
+    - "2.7"
+    - "3.5"
+
+matrix:
+  allow_failures:
+    - python: "2.6"
+    - python: "3.5"
+
+before_install:
+  - sudo chmod u+x .travis/*.sh
+  - /bin/bash .travis/setup.sh
+
+script:
+                               # recipe
+  - /bin/bash .travis/build.sh Singularity
+
+  # Examples with upload to storage clients defined by sregistry
+  # https://singularityhub.github.io/sregistry-cli/clients
+  # Environment variables must be defined in CI encrypted secrets/settings
+
+  #- /bin/bash .travis/build.sh --uri collection/container --tag tacos --cli google-storage Singularity
+  #- /bin/bash .travis/build.sh --uri collection/container --cli google-drive Singularity
+  #- /bin/bash .travis/build.sh --uri collection/container --cli globus Singularity
+  #- /bin/bash .travis/build.sh --uri collection/container --cli registry Singularity
