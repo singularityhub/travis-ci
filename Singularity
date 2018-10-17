@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: ubuntu:latest
+From: ubuntu:16.04
 
 %runscript
     exec echo "Polo $@!"

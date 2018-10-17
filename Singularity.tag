@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: ubuntu:latest
+From: centos:7
 
 %runscript
     exec echo "Never sneeze on an ice cube tray, $@!"
