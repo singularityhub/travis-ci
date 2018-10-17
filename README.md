@@ -2,7 +2,7 @@
 
 ![.travis/sregistry-travis.png](.travis/sregistry-travis.png)
 
-[![Build Status](https://travis-ci.org/singularityhub/travis.svg?branch=master)](https://travis-ci.org/singularityhub/travis)
+[![Build Status](https://travis-ci.org/singularityhub/travis-ci.svg?branch=master)](https://travis-ci.org/singularityhub/travis-ci)
 
 This is a simple example of how you can achieve:
 
