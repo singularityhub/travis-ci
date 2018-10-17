@@ -61,7 +61,7 @@ files and edit them as you need.
 ### 1. Get to Know Travis
 
 We will be working with [Travis CI](https://www.travis-ci.org). You can see 
-example builds for this [repository here](https://travis-ci.org/singularityhub/travis/builds).
+example builds for this [repository here](https://travis-ci.org/singularityhub/travis-ci/builds).
 
  - Travis offers [cron jobs](https://docs.travis-ci.com/user/cron-jobs/) so you could schedule builds at some frequency.
  - Travis also offers [GPU Builders](https://circleci.com/docs/2.0/gpu/) if you want/need that sort of thing.
