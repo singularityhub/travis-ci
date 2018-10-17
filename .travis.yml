@@ -21,6 +21,9 @@ script:
                                # recipe
   - /bin/bash .travis/build.sh Singularity
 
+                               # recipe with tag
+  - /bin/bash .travis/build.sh --tag sneeze Singularity.tag
+
   # Examples with upload to storage clients defined by sregistry
   # https://singularityhub.github.io/sregistry-cli/clients
   # Environment variables must be defined in CI encrypted secrets/settings
