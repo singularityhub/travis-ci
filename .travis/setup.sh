@@ -26,7 +26,7 @@ echo "sregistry Version:"
 # Install Singularity
 
 cd /tmp && \
-    git clone -b vault/release-2.5 https://www.github.com/sylabs/singularity.git
+    git clone -b vault/release-2.6 https://www.github.com/sylabs/singularity.git
     cd singularity && \
     ./autogen.sh && \
     ./configure --prefix=/usr/local && \

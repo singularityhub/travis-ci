@@ -11,7 +11,9 @@ This is a simple example of how you can achieve:
  - build of associated container and
  - push to a storage endpoint
 
-for a reproducible build workflow.
+for a reproducible build workflow. This branch, release/2.6, is intended for 
+legacy versions of Singularity that built with autotools (and not GoLang).
+See the msater branch for a version that builds Singularity 3.0+.
 
 **Why should this be managed via Github?**
 
