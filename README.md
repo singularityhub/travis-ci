@@ -11,7 +11,9 @@ This is a simple example of how you can achieve:
  - build of associated container and
  - push to a storage endpoint
 
-for a reproducible build workflow.
+for a reproducible build workflow. This recipe on master is intended to build
+Singularity 3.x (with GoLang). If you are looking for legacy builds of Singularity,
+see the [release/2.6](https://github.com/singularityhub/travis-ci/tree/release/2.6) branch.
 
 **Why should this be managed via Github?**
 

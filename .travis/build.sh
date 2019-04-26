@@ -92,32 +92,8 @@ fi
 
 echo ""
 echo "Image Recipe: ${recipe}"
-
-
-################################################################################
-### Storage Client #############################################################
-################################################################################
-
-is_valid_client () {
-  local e match="$1"
-  shift
-  for e; do [[ "$e" == "$match" ]] && return 0; done
-  return 1
-}
-
-# Test if client is valid
-
-clients=("google-storage" "registry" "globus" "dropbox" "google-drive")
-
 if [ "${cli}" != "" ]; then
-    is_valid_client "${cli}" "${clients[@]}"
-    if [ $? -ne 0 ]; then
-        echo "${cli} is not a valid choice! Choose from ${clients[@]}";
-        exit 1
-    fi
     echo "Storage Client: ${cli}"
-else
-    echo "Storage Client: none"
 fi
 
 
@@ -129,7 +105,7 @@ fi
 
 if [ -f "$recipe" ]; then
 
-    imagefile="${recipe}.simg"
+    imagefile="${recipe}.sif"
 
     echo "Creating $imagefile using $recipe..."
     sudo singularity build $imagefile $recipe
