@@ -17,7 +17,12 @@ echo ${PWD}
 ls
 SINGULARITY_BASE="${GOPATH}/src/github.com/sylabs/singularity"
 export PATH="${GOPATH}/bin:${PATH}"
-cd ${SINGULARITY_BASE}
+
+mkdir -p "${GOPATH}/src/github.com/sylabs"
+cd "${GOPATH}/src/github.com/sylabs"
+
+git clone -b release-3.2 https://github.com/sylabs/singularity
+cd singularity
 echo ${PWD}
 ls
 ./mconfig -v -p /usr/local

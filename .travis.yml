@@ -5,8 +5,6 @@ language: go
 go:
     - "1.11"
 
-go_import_path: github.com/sylabs/singularity
-
 python:
     - "2.7"
     - "3.5"
