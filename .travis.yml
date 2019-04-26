@@ -1,21 +1,53 @@
-language: python
-
-sudo: true
-
 os: linux
+
+language: go
+
+go:
+    - "1.11"
+
+go_import_path: github.com/sylabs/singularity
 
 python:
     - "2.7"
     - "3.5"
 
+addons:
+  apt:
+    packages:
+      - flawfinder
+      - squashfs-tools
+      - uuid-dev
+      - libuuid1
+      - libssl-dev
+      - libssl1.0.0
+      - libarchive-dev
+      - libgpgme11-dev
+      - libseccomp-dev
+  homebrew:
+    packages:
+      - squashfs
+    update: true
+
+
+sudo: required
+#dist: trusty
+
+
 matrix:
-  allow_failures:
+  include:
     - python: "2.6"
     - python: "3.5"
+      before_install:
+        - # pass
+      script:
+        - # pass
 
 before_install:
   - sudo chmod u+x .travis/*.sh
   - /bin/bash .travis/setup.sh
+
+install:
+  - # override
 
 script:
                                # recipe
