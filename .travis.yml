@@ -5,6 +5,9 @@ language: go
 go:
   - "1.13.5"
 
+env:
+  - GO111MODULE=on
+
 python:
   - "3.9"
 
