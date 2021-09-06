@@ -1,4 +1,4 @@
-# Singularity Builders Travis-CI
+# Singularity Builders Travis -CI
 
 ![.travis/sregistry-travis.png](.travis/sregistry-travis.png)
 
