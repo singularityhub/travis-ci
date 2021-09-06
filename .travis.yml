@@ -56,6 +56,6 @@ script:
   # Environment variables must be defined in CI encrypted secrets/settings
 
   #- /bin/bash .travis/build.sh --uri collection/container --tag tacos --cli google-storage Singularity
-  #- /bin/bash .travis/build.sh --uri collection/container --cli google-drive Singularity
+  - /bin/bash .travis/build.sh --uri collection/container --cli google-drive Singularity
   #- /bin/bash .travis/build.sh --uri collection/container --cli globus Singularity
   #- /bin/bash .travis/build.sh --uri collection/container --cli registry Singularity
