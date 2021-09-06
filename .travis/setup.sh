@@ -11,6 +11,8 @@ pip install --user sregistry[all]
 echo "sregistry Version:"
 sregistry version
 
+sudo rm -rf /usr/local/go
+sudo rm /etc/paths.d/go
 
 export VERSION=1.13 OS=linux ARCH=amd64 && \
     wget https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz && \
