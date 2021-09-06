@@ -13,14 +13,11 @@ echo "sregistry Version:"
 
 # Install Singularity
 
-SINGULARITY_BASE="${GOPATH}/src/github.com/sylabs/singularity"
-export PATH="${GOPATH}/bin:${PATH}"
+export VERSION=3.7.2 && # adjust this as necessary \
+    wget https://github.com/hpcng/singularity/releases/download/v${VERSION}/singularity-${VERSION}.tar.gz && \
+    tar -xzf singularity-${VERSION}.tar.gz && \
+    cd singularity
 
-mkdir -p "${GOPATH}/src/github.com/sylabs"
-cd "${GOPATH}/src/github.com/sylabs"
-
-git clone -b release-3.6 https://github.com/sylabs/singularity
-cd singularity
-./mconfig -v -p /usr/local
-make -j `nproc 2>/dev/null || echo 1` -C ./builddir all
-sudo make -C ./builddir install
+./mconfig && \
+    make -C builddir && \
+    sudo make -C builddir install
